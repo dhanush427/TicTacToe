@@ -1,86 +1,70 @@
 import java.util.Scanner;
 import java.util.Date;
 
-public class AnanthkarTTT{
+/**
+* This is the TicTacToe game developed in Java.
+*
+*
+**/
+
+public class TicTacToe{
 	public static void main(String[] args){
 
 		Scanner reader = new Scanner (System.in);
 
 
-// This in array is drawing up the board lines. In (xstart, ystart, xend, yend) format
+		// This in array is drawing up the board lines. In (xstart, ystart, xend, yend) format
 		int[][]boardLine = {{0,200,600,200},
 							 {0,400,600,400},
 							 {200,0,200,600},
 							 {400,0,400,600}};
-// This sets up the array that will be used to set up the X/O grid. They are temporarily filled with hyphens until they are fiflled with x and o values.
+		// This sets up the array that will be used to set up the X/O grid. They are temporarily filled with hyphens until they are fiflled with x and o values.
 		char [][]arr = new char[3][3];
 		for (int i=0;i<3;i++)
 			for (int j=0;j<3;j++)
 				arr[i][j]='-';
 
-
-
-
-
-// This line imports the TicTacToeBoard file
+		// This line imports the TicTacToeBoard file
 		TicTacToeBoard board = new TicTacToeBoard(620,720);
 
-
-
-
-
-
-
-
-// This sets up the grid given the lines you provided above in the boardLine array
+		// This sets up the grid given the lines you provided above in the boardLine array
 		board.defineBoard(boardLine);
-// This will set your pictures to display for the x and o values. Make sure your names match exactly what you type in the parameters.
+		// This will set your pictures to display for the x and o values. Make sure your names match exactly what you type in the parameters.
 		board.setFiles("croppedX.png","Cyrillic-O.png");
-// This sets up the spacing and place values for x and o
+		// This sets up the spacing and place values for x and o
 		board.setBoard(arr);
-// This will refresh the board so that new elements will display.
+		// This will refresh the board so that new elements will display.
 		board.repaint();
 
+		boolean usertry = false;
+		boolean user2try = false;
+		boolean comptry = false;
+		boolean winner = false;
+		boolean notvalid = false;
+		boolean responsevalid = false;
 
-	boolean usertry = false;
-	boolean user2try = false;
-	boolean comptry = false;
-	boolean winner = false;
-	boolean notvalid = false;
-	boolean responsevalid = false;
-
-	int tie = 0;
-	String response = "";
-
-
-
-	System.out.println(" !!! WELCOME TO TIC_TAC_TOE WITH ME !!!\nI have set the board up as Row(0)(1)(2) and Column(0)(1)(2).");
-	System.out.println();
+		int tie = 0;
+		String response = "";
 
 
 
-
-
-	do{
-		System.out.println("One or Two Players?\nIf One Player enter (One Player), if Two Players enter (Two Players)");
-		response = reader.nextLine();
-
+		System.out.println(" !!! WELCOME TO TIC_TAC_TOE WITH ME !!!\nI have set the board up as Row(0)(1)(2) and Column(0)(1)(2).");
 		System.out.println();
 
+		do{
+			System.out.println("One or Two Players?\nIf One Player enter (One Player), if Two Players enter (Two Players)");
+			response = reader.nextLine();
 
-		if ((response.equals("One Player"))||(response.equals("Two Players"))){
-					responsevalid = true;
-		}
-
-
-		else {
-			System.out.println("ERROR : NOT A VALID GAME PLAY");
 			System.out.println();
-			responsevalid = false;
+
+			if ((response.equals("One Player"))||(response.equals("Two Players"))){
+					responsevalid = true;
+			}
+			else {
+				System.out.println("ERROR : NOT A VALID GAME PLAY");
+				System.out.println();
+				responsevalid = false;
 		}
-
-
-
 	}while(responsevalid == false);
 
 
