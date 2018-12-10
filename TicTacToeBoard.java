@@ -79,10 +79,10 @@ public class TicTacToeBoard{
 
 
 		 @Override
-		 public void paintComponent(Graphics g) {
-		 	super.paintComponent(g);
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 
-		 	for (int i=0;i<3;i++){
+			for (int i=0;i<3;i++){
 				for (int j=0;j<3;j++){
 					if (pieces[i][j]=='x'){
 						g.drawImage(image1,j*200+25,i*200+25,null,null);
