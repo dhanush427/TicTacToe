@@ -83,31 +83,31 @@ public class TicTacToe{
 
 
 
-					System.out.println("Enter what row you want");
-					int row = reader.nextInt();
+				System.out.println("Enter what row you want");
+				int row = reader.nextInt();
 
-					System.out.println("Enter what column you want");
-					int column = reader.nextInt();
+				System.out.println("Enter what column you want");
+				int column = reader.nextInt();
 
 
-					if ((row > 2 || row < 0) || (column > 2 || column < 0) ){
-						usertry = false;
-						System.out.println();
-						System.out.println("Not Valid enter again");
-						System.out.println();
-					}
-					else if(arr[row][column] == '-'){
-						arr[row][column] = 'x';
-						usertry = true;
-						tie++;
-					}
-					else{
-						usertry = false;
-						System.out.println("That spot is invalid");
-						System.out.println();
+				if ((row > 2 || row < 0) || (column > 2 || column < 0) ){
+					usertry = false;
+					System.out.println();
+					System.out.println("Not Valid enter again");
+					System.out.println();
+				}
+				else if(arr[row][column] == '-'){
+					arr[row][column] = 'x';
+					usertry = true;
+					tie++;
+				}
+				else{
+					usertry = false;
+					System.out.println("That spot is invalid");
+					System.out.println();
 
-					}
-					board.repaint();
+				}
+				board.repaint();
 
 			}while (usertry == false);
 
@@ -117,98 +117,98 @@ public class TicTacToe{
 
 				if(arr[0][0] == 'x' && arr[0][1] == 'x' && arr[0][2] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				else if(arr[1][0] == 'x' && arr[1][1] == 'x' && arr[1][2] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				else if(arr[2][0] == 'x' && arr[2][1] == 'x' && arr[2][2] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				else if(arr[0][0] == 'x' && arr[1][0] == 'x' && arr[2][0] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				else if(arr[0][1] == 'x' && arr[1][1] == 'x' && arr[2][1] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				else if(arr[0][2] == 'x' && arr[1][2] == 'x' && arr[2][2] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 				else if(arr[0][0] == 'x' && arr[1][1] == 'x' && arr[2][2] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				else if(arr[0][2] == 'x' && arr[1][1] == 'x' && arr[2][0] == 'x' ){
 
-						System.out.println("X WINS");
-						board.setWinner("X WINS", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						winner = true;
-						break;
+					System.out.println("X WINS");
+					board.setWinner("X WINS", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					winner = true;
+					break;
 
 				}
 
 				if (tie == 9){
 
-						System.out.println("IT'S A TIE");
-						board.setWinner("IT'S A TIE", 130, 660, 55);
-						board.showText(true);
-						board.repaint();
-						break;
+					System.out.println("IT'S A TIE");
+					board.setWinner("IT'S A TIE", 130, 660, 55);
+					board.showText(true);
+					board.repaint();
+					break;
 
 
 						}
@@ -217,11 +217,7 @@ public class TicTacToe{
 
 				System.out.println("Computer's Turn");
 
-
-
-
 						board.delay(1000);
-
 
 				do{
 				int x = (int)(Math.random()*3)+0;
@@ -364,39 +360,39 @@ public class TicTacToe{
 			//Re loop
 				do{
 
-						do {
+					do {
 
+					System.out.println();
+
+					System.out.println("Player 1's Turn: \nEnter what row you want");
+					int row = reader.nextInt();
+
+					System.out.println("Enter what column you want");
+					int column = reader.nextInt();
+
+
+
+					if ((row > 2 || row < 0) || (column > 2 || column < 0) ){
+
+						usertry = false;
+						System.out.println();
+						System.out.println("Not Valid enter again");
+						System.out.println();
+					}
+					else if(arr[row][column] == '-'){
+						arr[row][column] = 'x';
+						usertry = true;
+						tie++;
+					}
+					else{
+						usertry = false;
+						System.out.println("That spot is invalid");
 						System.out.println();
 
-						System.out.println("Player 1's Turn: \nEnter what row you want");
-						int row = reader.nextInt();
+					}
+				board.repaint();
 
-						System.out.println("Enter what column you want");
-						int column = reader.nextInt();
-
-
-
-						if ((row > 2 || row < 0) || (column > 2 || column < 0) ){
-
-							usertry = false;
-							System.out.println();
-							System.out.println("Not Valid enter again");
-							System.out.println();
-						}
-						else if(arr[row][column] == '-'){
-							arr[row][column] = 'x';
-							usertry = true;
-							tie++;
-						}
-						else{
-							usertry = false;
-							System.out.println("That spot is invalid");
-							System.out.println();
-
-						}
-					board.repaint();
-
-					}while (usertry == false);
+				}while (usertry == false);
 
 
 
